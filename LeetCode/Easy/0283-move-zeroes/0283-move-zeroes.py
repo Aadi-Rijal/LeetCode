@@ -1,14 +1,10 @@
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        left = 0
-        right = 1
-        while right < len(nums):
-            if nums[left] == 0:
-                if nums[right] != 0:
-                    nums[left], nums[right] = nums[right], nums[left]
-                    left += 1
-            else:
-                left += 1
-            right += 1
+        lastNonZeroFoundAt = 0
+        cur = 0
 
-        
+        while cur < len(nums):
+            if nums[cur] != 0:
+                nums[lastNonZeroFoundAt], nums[cur] = nums[cur], nums[lastNonZeroFoundAt]
+                lastNonZeroFoundAt += 1
+            cur += 1
