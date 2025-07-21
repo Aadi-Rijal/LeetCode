@@ -1,10 +1,7 @@
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        lastNonZeroFoundAt = 0
-        cur = 0
-
-        while cur < len(nums):
-            if nums[cur] != 0:
-                nums[lastNonZeroFoundAt], nums[cur] = nums[cur], nums[lastNonZeroFoundAt]
-                lastNonZeroFoundAt += 1
-            cur += 1
+        l = 0
+        for r in range(len(nums)):
+            if num[r]:
+                num[l], num[r] = num[r], num[l]
+                l += 1
