@@ -1,4 +1,5 @@
 class Solution:
+    # My solution
     def removeDuplicates(self, nums: List[int]) -> int:
         cur = 0
         for num in nums:
